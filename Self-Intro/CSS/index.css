@@ -1,0 +1,370 @@
+@font-face {
+    font-family: Bodoni;
+    src: url('../SRC/FONT/BodoniFLF-Bold.ttf');
+}
+
+/* share class */
+/* ** page-size ** */ 
+body {
+    background: #E0E0E0;
+    margin: 0;
+}
+
+nav {
+    font-family: Bodoni;
+    background-color: #F8F8F8;
+    margin: 0;
+    height: calc((12.5vh+12.5vw)/2);
+    width: 100%;
+    top: 0%;
+}
+
+main {
+    margin-top: calc((12.5vh+12.5vw)/2); 
+}
+
+
+main .pages {
+    padding: calc((23.75vh + 12.25vw)/4);
+    width: 100%;
+}
+
+
+#Home, #Skill, #Contact {
+    background: #E0E0E0;
+}
+
+/* ** object-size ** */ 
+
+img {
+    max-width: 100%;
+    max-height: 70vh;
+}
+
+hr {
+    height: 1vw !important;
+}
+
+.button {
+    border-radius: 12px;
+    box-shadow: 0.1em 0.1em rgb(152, 155, 160);
+    background-color: darkcyan;
+    font-family: Bodoni;
+    font-size: 1.8vw;
+    color: white;
+
+    padding: 0.1em 1.5em;
+    margin: 0.5em 0;
+}
+
+.button:focus{
+    outline:0px;
+}
+
+.container {
+    margin: auto;
+}
+
+.title-1, .title-2, .content-text {
+    font-family: Bodoni;
+
+}
+
+.title-1 {
+    font-size: 6.5vw;
+}
+
+.title-2 {
+    font-size: 2.5vw;
+}
+
+.content-text {
+    font-size: 1.8vw;
+}
+
+
+
+/* each part */
+/* ** nav ** */
+.nav-items {
+    display: inline-block;
+    margin: 0%;
+    padding: 1vh 3vw;
+}
+
+.nav-items a {
+    text-decoration: none;
+    color: #AAAEB5;
+    font-size: 1.8vw;
+}
+
+.nav-items a:hover {
+    color: #4D4F52;
+}
+
+
+/* **Home** */
+
+/* ** Home img fadeIn-Out try ** */
+/*
+#Home #HomeImg {
+    opacity: 0;
+    animation: slide 3s infinite; 
+    animation-delay: 1.8s;
+}
+
+
+@keyframes slide {
+  10% {
+    opacity: 0.5; 
+  }
+  50% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+*/
+
+
+
+#Home #overlap-title {
+    margin-top: -40%;
+    z-index: 100;
+}
+@media screen and (min-width: 575px) and (max-width: 770px){
+    #overlap-title {
+        background-image: linear-gradient(to right,#d5e1e6, #E0E0E0, #E0E0E0E5, #E0E0E035);
+    }
+    
+}
+
+@media screen and (max-width: 575px){
+    #overlap-title {
+        background-image: radial-gradient(farthest-corner at 5% 30%, #afc4cc,#d5e1e6E5, #d5e1e6A5, #E0E0E055);
+    }
+}
+
+
+
+/* **About** */
+
+#About {
+    align-content: center;
+}
+
+
+#AboutImg{
+    background-image: url('../SRC/IMG/2.\ About\ me/IMG02.png');
+    background-position: center ;
+    background-repeat: no-repeat;
+    background-size: 150%;
+
+}
+
+#AboutImg img {
+    width: 60%;
+    margin-top: 20%;
+    margin-bottom: 40%;
+
+}
+
+#About #overlap-content {
+    margin-top: -60%;
+}
+
+#About #overlap-content ul {
+    background-color: #F8F8F8;
+}
+
+
+#About .list-group-item {
+    border: none !important;
+}
+
+
+/* ** Skill & footer ** */
+
+.justify-content-center .row ,.justify-content-around .row {
+    text-align: center;
+}
+
+.justify-content-center div {
+    width: auto !important;
+}
+
+
+#Skill, footer {
+    padding: calc((23.75vh + 12.25vw)/8);
+}
+
+#Skill .row {
+    width: 50vw;
+}
+
+#Skill img {
+    max-width: 8vw;
+    margin: 1vw 0;
+}
+
+footer .row {
+    width: 45vw;
+}
+
+footer img {
+    max-width: 5vw;
+    margin: 1vw 0;
+}
+
+footer p{
+    font-size: 0.5vw; 
+}
+
+
+/* ** Portfolio & Contact ** */
+.wrapper {
+    display: grid;
+    grid-auto-rows: calc((8vw+8vh)/2);
+    gap: 20px;
+}
+
+#Portfolio p {
+    text-align: center;
+}
+
+#Portfolio .wrapper {
+    width: 80%; 
+    grid-template-columns: repeat(3, 1fr);
+}
+#Portfolio img{
+    height: 100%;
+    width: 100%;
+}
+
+/* **** hover: img, detail **** */
+/* **** ** img: black layer over img ** **** */
+/* **** ** text: text block over img ** **** */
+
+.overlay-Img {
+    background: rgba(0,0,0,0.7);
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    opacity: 0.7;
+    margin:0;
+    padding:0;
+    -webkit-transition: all 0.4s ease-in-out 0s;
+    -moz-transition: all 0.4s ease-in-out 0s;
+    transition: all 0.4s ease-in-out 0s;
+}
+
+
+.overlay-detail {
+  position: absolute;
+  text-align: center;
+  padding: 0 1rem;
+  width: 100%;
+  top: 40%;
+  left: 50%;
+  opacity: 1;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  -moz-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+
+  color: white;
+  font-size: 1.5vw;
+  font-family: Bodoni;
+}
+
+  
+.PortGrid:hover .overlay-Img{
+    opacity: 0;
+}
+
+.PortGrid:hover .overlay-detail {
+    top: 50%;
+    left: 50%;
+    opacity: 0;
+}
+
+
+#PortGrid-1 {
+    position:relative;
+    grid-row-start: 1;
+    grid-row-end: 5;
+}
+
+#PortGrid-2 {
+    position:relative;
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+
+#PortGrid-3 {
+    position:relative;
+    grid-row-start: 1;
+    grid-row-end: 6;
+}
+
+#PortGrid-4 {
+    position:relative;
+    grid-row-start: 5;
+    grid-row-end: 9;
+}
+
+#PortGrid-5 {
+    position:relative;
+    grid-row-start: 3;
+    grid-row-end: 6;
+}
+
+#PortGrid-6 {
+    position:relative;
+    grid-row-start: 6;
+    grid-row-end: 9;
+    grid-column-start: 2;
+    grid-column-end: 4;
+}
+
+
+#Contact hr {
+    width: 20vw;
+}
+
+#Contact .wrapper {
+    width: 80%; 
+    grid-template-columns: repeat(2, 60%);
+}
+
+#Contact-3 {
+    grid-column-start: 1;
+    grid-column-end: 3; 
+}
+
+
+#Contact-4 {
+    grid-row-start: 3;
+    grid-row-end: 7;
+    grid-column-start: 1;
+    grid-column-end: 3; 
+}
+
+#Contact .Contact-btn {
+    text-align: right;
+    margin: 2%;
+}
+
+#Contact ::placeholder {
+    font-size: 2vw;
+    font-family: Bodoni; 
+}
