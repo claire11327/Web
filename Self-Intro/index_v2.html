@@ -1,0 +1,165 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+
+    <link href="./CSS/index_v2.css" rel="stylesheet" type="text/css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+
+    <script src="JS/index.js" type="text/javascript"></script>
+</head>
+
+<body onload="onloadImg()">
+    <nav class="fixed-top d-flex justify-content-end">
+        <ul>
+            <li class="nav-items"><a href="#Home">Home</a></li>
+            <li class="nav-items"><a href="#About">About me</a></li>
+            <li class="nav-items"><a href="#Skill">Skill</a></li>
+            <li class="nav-items"><a href="#Portfolio">Portfolio</a></li>
+            <li class="nav-items"><a href="#Contact">Contact me</a></li>
+        </ul>
+    </nav>
+    <main>
+        <header class="pages" id="Home">
+            <div class="container">
+                <img id="HomeImg" src="SRC/IMG/1. Home/IMG01.jpg">
+                <div id="overlap-title">
+                    <p class="title-1">Katie Eillison</p>
+                    <p class="title-2">A photographer</p>
+                    <button class="button" id="more" onClick="document.getElementById('About').scrollIntoView();">more</button>
+                </div>
+            </div>
+        </header>
+
+        <section class="pages" id="About">
+            <div class="container">
+                <div id="AboutImg">
+                    <img src="SRC/IMG/2. About me/IMG01.png" class="d-block mx-auto">
+                </div>
+                <div id="overlap-content">
+                    <p class="title-2">About me...</p>
+                    <hr>
+                    <ul class="content-text list-group">
+                        <li class="mt-7 list-group-item">Work Experirnce</li>
+                        <table class="table  table-borderless list-group-item ">
+                            <tbody>
+                                <tr>
+                                    <td>2019-now</td>
+                                    <td>Freelancer Photographer</td>
+                                </tr>
+                                <tr>
+                                    <td>2015-2019</td>
+                                    <td>VOGUE Photographer</td>
+                                </tr>
+                                <tr>
+                                    <td>2014-2015</td>
+                                    <td>Event Photography assistant</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <li class="mt-7 list-group-item">Education</li>
+                        <table class="table  table-borderless list-group-item ">
+                            <tbody>
+                                <tr>
+                                    <td>2012-2014</td>
+                                    <td>MA in photography, RCA</td>
+                                </tr>
+                                <tr>
+                                    <td>2008-2012</td>
+                                    <td>BA in graphic design,UAL</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <section id="Skill">
+            <div class="d-flex justify-content-around">
+                <div class="row">
+                    <div class="col-sm-4"><img src="SRC/IMG/3. Skill/IMG01.png"></div>
+                    <div class="col-sm-4"><img src="SRC/IMG/3. Skill/IMG02.png"></div>
+                    <div class="col-sm-4"><img src="SRC/IMG/3. Skill/IMG03.png"></div>
+                </div>
+            </div>
+        </section>
+        <section class="pages" id="Portfolio">
+            <p class="title-2 mb-5">Portfolio</p>
+
+            <div class="wrapper mx-auto">
+                <div id="PortGrid-1" class="PortGrid">
+                    <div class="overlay-Img"></div>
+                    <h2 class="overlay-detail">Asia</h2>
+                    <img src="SRC/IMG/4. Portfolio/IMG-Asia.jpg">
+                </div>
+
+                <div id="PortGrid-2" class="PortGrid">
+                    <div class="overlay-Img"></div>
+                    <h2 class="overlay-detail">London</h2>
+                    <img src="SRC/IMG/4. Portfolio/IMG-London.jpg">
+                </div>
+
+                <div id="PortGrid-3" class="PortGrid">
+                    <div class="overlay-Img"></div>
+                    <h2 class="overlay-detail">Italy</h2>
+                    <img src="SRC/IMG/4. Portfolio/IMG-Italy.jpg">
+                </div>
+
+                <div id="PortGrid-4" class="PortGrid">
+                    <div class="overlay-Img"></div>
+                    <h2 class="overlay-detail">America</h2>
+                    <img src="SRC/IMG/4. Portfolio/IMG-America.jpg">
+                </div>
+
+                <div id="PortGrid-5" class="PortGrid">
+                    <div class="overlay-Img"></div>
+                    <h2 class="overlay-detail">France</h2>
+                    <img src="SRC/IMG/4. Portfolio/IMG-France.jpg">
+                </div>
+
+                <div id="PortGrid-6" class="PortGrid">
+                    <div class="overlay-Img"></div>
+                    <h2 class="overlay-detail">Others</h2>
+                    <img src="SRC/IMG/4. Portfolio/IMG-Others.jpg">
+                </div>
+            </div>
+        </section>
+        <section class="pages" id="Contact">
+            <p class="title-2">Contact me
+                <hr>
+            </p>
+            <p class="content-text">Please fill out the quick form and we will be in touch</p>
+            <div class="wrapper">
+                <input id="Contact-1" type="text" placeholder=" First Name">
+                <input id="Contact-2" type="text" placeholder=" Last Name">
+                <input id="Contact-3" type="email" placeholder=" Email">
+                <input id="Contact-4" type="text" placeholder=" Leave yout messenge...">
+            </div>
+            <div class="Contact-btn">
+                <input class="button" type="submit" value="Submit">
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="d-flex  justify-content-center">
+            <div class="row  justify-content-center">
+                <div class="col-sm-2"><img src="SRC/IMG/5. Footer/Linkedin.png"></div>
+                <div class="col-sm-2"><img src="SRC/IMG/5. Footer/facebook.png"></div>
+                <div class="col-sm-2 align-self-center"><img src="SRC/IMG/5. Footer/youtube.png"></div>
+            </div>
+        </div>
+        <div class="d-flex justify-content-center ">
+            <div class="row">
+                <p>© 2021 Liz Li-all rights reserved. Terms of Use Privacy & Cookies</p>
+            </div>
+        </div>
+
+
+    </footer>
+</body>
+
+</html>
