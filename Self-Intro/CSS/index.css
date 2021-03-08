@@ -360,7 +360,9 @@ footer p{
 
 
 #Contact hr {
-    width: 20vw;
+    margin-right: 0;
+    width: 97.3%;
+    min-width: 76vw;
 }
 
 #Contact .wrapper {
