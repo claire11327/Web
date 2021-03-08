@@ -31,7 +31,7 @@ main .pages {
 
 
 #Home, #Skill, #Contact {
-    background: #E0E0E0;
+    background: #F8F8F8;
 }
 
 /* ** object-size ** */ 
@@ -156,12 +156,29 @@ hr {
 }
 
 
-#HomeImg {
+#HomeImgContainer {
     grid-row-start: 1;
     grid-row-end: 5;
     grid-column-start: 3;
     grid-column-end: 5;
 }
+
+#HomeImgContainer svg {
+    border-radius: 12px;
+    width: 5%; 
+    height: 0.5vw;
+}
+
+#HomeImgOrder-1 {
+    margin-left: 40%;
+    background-color: #AAAEB5 ;
+}
+
+#HomeImgOrder-2, #HomeImgOrder-3 {
+    background-color: #E7DDDE;
+}
+
+
 
 
 /* **About** */
