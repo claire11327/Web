@@ -139,7 +139,7 @@ hr {
 }
 
 #Home .container {
-    grid-template-columns: repeat(3, 30%) auto;
+    grid-template-columns: 10% repeat(2, 25%) 5% 30%;
 }
 
 #overlap-title {
@@ -148,19 +148,19 @@ hr {
 }
 
 #overlap-title {
+    z-index: 10;
     grid-row-start: 2;
     grid-row-end: 5;
-
-    grid-column-start: 1;
-    grid-column-end: 3;
+    grid-column-start: 2;
+    grid-column-end: 5;
 }
 
 
 #HomeImgContainer {
     grid-row-start: 1;
     grid-row-end: 5;
-    grid-column-start: 3;
-    grid-column-end: 5;
+    grid-column-start: 4;
+    grid-column-end: 6;
 }
 
 #HomeImgContainer svg {
