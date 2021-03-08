@@ -43,21 +43,25 @@ img {
 
 hr {
     height: 1vw !important;
+    color: #E7DDDE;
 }
 
 .button {
     border-radius: 12px;
     box-shadow: 0.1em 0.1em rgb(152, 155, 160);
-    background-color: darkcyan;
+    background-color: #0E615D;
     font-family: Bodoni;
     font-size: 1.8vw;
-    color: white;
+    color: #FFFFFF;
 
     padding: 0.1em 1.5em;
     margin: 0.5em 0;
 }
+.button:hover {
+    background-color: #0A413F;
+}
 
-.button:focus{
+.button:focus {
     outline:0px;
 }
 
@@ -178,7 +182,7 @@ hr {
 }
 
 #About #overlap-content ul {
-    background-color: #F8F8F8;
+    background-color: rgb(255, 255, 255);
 }
 
 
@@ -222,6 +226,7 @@ footer img {
 
 footer p{
     font-size: 0.5vw; 
+    color: #4D4F52;
 }
 
 
@@ -234,6 +239,7 @@ footer p{
 
 #Portfolio p {
     text-align: center;
+    color: #4D4F52
 }
 
 #Portfolio .wrapper {
