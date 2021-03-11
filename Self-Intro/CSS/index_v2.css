@@ -3,6 +3,11 @@
     src: url('../SRC/FONT/BodoniFLF-Bold.ttf');
 }
 
+
+html {
+    scroll-behavior: smooth;
+}
+
 /* share class */
 /* ** page-size ** */ 
 body {
