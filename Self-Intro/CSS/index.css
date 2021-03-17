@@ -3,6 +3,11 @@
     src: url('../SRC/FONT/BodoniFLF-Bold.ttf');
 }
 
+
+html {
+    scroll-behavior: smooth;
+}
+
 /* share class */
 /* ** page-size ** */ 
 body {
@@ -63,10 +68,6 @@ hr {
 
 .button:focus {
     outline:0px;
-}
-
-.container {
-    margin: auto;
 }
 
 .title-1, .title-2, .content-text {
@@ -135,32 +136,46 @@ hr {
 */
 
 
-
-#Home #overlap-title {
-    margin-top: -40%;
-    z-index: 100;
-}
-@media screen and (min-width: 575px) and (max-width: 770px){
-    #overlap-title {
-        background-image: linear-gradient(to right,#d5e1e6, #E0E0E0, #E0E0E0E5, #E0E0E035);
-    }
+.container {
+    margin: auto;
     
+    display: grid;
+    grid-template-rows: repeat(4, 20%);
 }
 
-@media screen and (max-width: 575px){
-    #overlap-title {
-        background-image: radial-gradient(farthest-corner at 5% 30%, #afc4cc,#d5e1e6E5, #d5e1e6A5, #E0E0E055);
-    }
+#Home .container {
+    grid-template-columns: 10% repeat(2, 25%) 5% 30%;
+}
+
+#overlap-title {
+    z-index: 100;
+    color: #4D4F52;
+}
+
+#overlap-title {
+    z-index: 10;
+    grid-row-start: 2;
+    grid-row-end: 5;
+    grid-column-start: 2;
+    grid-column-end: 5;
+}
+
+
+#HomeImgContainer {
+    grid-row-start: 1;
+    grid-row-end: 5;
+    grid-column-start: 4;
+    grid-column-end: 6;
 }
 
 #HomeImgContainer svg {
     border-radius: 12px;
-    width: 3%; 
+    width: 5%; 
     height: 0.5vw;
 }
 
 #HomeImgOrder-1 {
-    margin-left: 30%;
+    margin-left: 40%;
     background-color: #AAAEB5 ;
 }
 
@@ -170,19 +185,28 @@ hr {
 
 
 
+
 /* **About** */
 
 #About {
     align-content: center;
 }
 
+#About .container {
+    grid-template-columns: 30% auto 30% 30%;
+}
+
 
 #AboutImg{
     background-image: url('../SRC/IMG/2.\ About\ me/IMG02.png');
-    background-position: center ;
+    background-position: center top ;
     background-repeat: no-repeat;
-    background-size: 150%;
+    background-size: 140%;
 
+    grid-row-start: 1;
+    grid-row-end: 5;
+    grid-column-start: 1;
+    grid-column-end: 3;
 }
 
 #AboutImg img {
@@ -193,18 +217,17 @@ hr {
 }
 
 #About #overlap-content {
-    margin-top: -60%;
+    grid-row-start: 1;
+    grid-row-end: 5;
+    grid-column-start: 3;
+    grid-column-end: 5;
 }
 
-#About #overlap-content ul {
-    background-color: rgb(255, 255, 255);
-}
 
 
 #About .list-group-item {
     border: none !important;
 }
-
 
 
 /* ** Skill & footer ** */
@@ -364,6 +387,7 @@ footer p{
     width: 97.3%;
     min-width: 76vw;
 }
+
 
 #Contact .wrapper {
     width: 80%; 
