@@ -5,10 +5,9 @@
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1" name="viewport">
 
-    <link href="../CSS/index.css" rel="stylesheet" type="text/css">
+    <link href="./CSS/index_v2.css" rel="stylesheet" type="text/css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
-
 </head>
 
 <body onload="onloadImg()">
@@ -24,65 +23,60 @@
     <main>
         <header class="pages" id="Home">
             <div class="container">
-                <div class="row ">
-                    <div id="HomeImgContainer" class="col-lg-6 offset-md-6">
-                        <img id="HomeImg" src="SRC/IMG/1. Home/IMG01.jpg" >
-                        <svg id="HomeImgOrder-1"></svg>
-                        <svg id="HomeImgOrder-2"></svg>
-                        <svg id="HomeImgOrder-3"></svg>
-                    </div>
-                    <div class="col-sm-7 overlap-text" id="overlap-title">
-                        <p class="title-1">Katie Eillison</p>
-                        <p class="title-2">A photographer</p>
-                        <button class="button" id="more" onClick="document.getElementById('About').scrollIntoView();">more</button>
-                    </div>
+                <div id="HomeImgContainer">
+                    <div class="topicImg"></div>
+                    <ul class="HomeImgList"></ul>
+                </div>
+                <div id="overlap-title">
+                    <p class="title-1">Katie Eillison</p>
+                    <p class="title-2">A photographer</p>
+                    <button class="button" id="more" onClick="document.getElementById('About').scrollIntoView();">more</button>
                 </div>
             </div>
         </header>
 
         <section class="pages" id="About">
             <div class="container">
-                <div class="row">
-                    <div class="col-lg-6 col-sm-9" id="AboutImg">
-                        <img src="SRC/IMG/2. About me/IMG01.png" class="d-block mx-auto">
-                    </div>
-                    <div class="col-lg-7 offset-md-6  col-sm-10" id="overlap-content">
-                        <p class="title-2">About me...</p>
-                        <hr>
-                        <ul class="content-text list-group">
-                            <li class="mt-7 list-group-item">Work Experirnce</li>
-                            <table class="table  table-borderless list-group-item ">
-                                <tbody>
-                                    <tr>
-                                        <td>2019- now</td>
-                                        <td>Freelancer Photographer</td>
-                                    </tr>
-                                    <tr>
-                                        <td>2015-2019</td>
-                                        <td>VOGUE Photographer</td>
-                                    </tr>
-                                    <tr>
-                                        <td>2014-2015</td>
-                                        <td>Event Photography Assistant</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                            <li class="mt-7 list-group-item">Education</li>
-                            <table class="table  table-borderless list-group-item ">
-                                <tbody>
-                                    <tr>
-                                        <td>2012-2014</td>
-                                        <td>MA in photography, RCA</td>
-                                    </tr>
-                                    <tr>
-                                        <td>2008-2012</td>
-                                        <td>BA in graphic design,UAL</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                            </li>
-                        </ul>
-                    </div>
+                <div id="AboutImg">
+                    <div class="topicImg d-block mx-auto"></div>
+                    <!--<img src="SRC/IMG/2. About me/IMG01.png" class="d-block mx-auto">-->
+                </div>
+                <div id="overlap-content">
+                    <p class="title-2">About me...</p>
+                    <hr>
+                    <ul class="content-text list-group">
+                        <li class="mt-7 list-group-item">Work Experirnce</li>
+                        <table class="table  table-borderless list-group-item ">
+                            <tbody>
+                                <tr>
+                                    <td>2019-now</td>
+                                    <td>Freelancer Photographer</td>
+                                </tr>
+                                <tr>
+                                    <td>2015-2019</td>
+                                    <td>VOGUE Photographer</td>
+                                </tr>
+                                <tr>
+                                    <td>2014-2015</td>
+                                    <td>Event Photography assistant</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <li class="mt-7 list-group-item">Education</li>
+                        <table class="table  table-borderless list-group-item ">
+                            <tbody>
+                                <tr>
+                                    <td>2012-2014</td>
+                                    <td>MA in photography, RCA</td>
+                                </tr>
+                                <tr>
+                                    <td>2008-2012</td>
+                                    <td>BA in graphic design,UAL</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </section>
@@ -102,37 +96,31 @@
                 <div id="PortGrid-1" class="PortGrid">
                     <div class="overlay-Img"></div>
                     <h2 class="overlay-detail">Asia</h2>
-                    <img src="SRC/IMG/4. Portfolio/IMG-Asia.jpg">
                 </div>
 
                 <div id="PortGrid-2" class="PortGrid">
                     <div class="overlay-Img"></div>
                     <h2 class="overlay-detail">London</h2>
-                    <img src="SRC/IMG/4. Portfolio/IMG-London.jpg">
                 </div>
 
                 <div id="PortGrid-3" class="PortGrid">
                     <div class="overlay-Img"></div>
                     <h2 class="overlay-detail">Italy</h2>
-                    <img src="SRC/IMG/4. Portfolio/IMG-Italy.jpg">
                 </div>
 
                 <div id="PortGrid-4" class="PortGrid">
                     <div class="overlay-Img"></div>
                     <h2 class="overlay-detail">America</h2>
-                    <img src="SRC/IMG/4. Portfolio/IMG-America.jpg">
                 </div>
 
                 <div id="PortGrid-5" class="PortGrid">
                     <div class="overlay-Img"></div>
                     <h2 class="overlay-detail">France</h2>
-                    <img src="SRC/IMG/4. Portfolio/IMG-France.jpg">
                 </div>
 
                 <div id="PortGrid-6" class="PortGrid">
                     <div class="overlay-Img"></div>
                     <h2 class="overlay-detail">Others</h2>
-                    <img src="SRC/IMG/4. Portfolio/IMG-Others.jpg">
                 </div>
             </div>
         </section>
@@ -168,7 +156,7 @@
 
 
     </footer>
-    <script src="../JS/index.js" type="text/javascript" ></script>
+    <script src="JS/index.js" type="text/javascript"></script>
 </body>
 
 </html>
