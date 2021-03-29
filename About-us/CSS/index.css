@@ -1,0 +1,251 @@
+@font-face {
+    font-family: Bodoni;
+    src: url('../SRC/FONT/BodoniFLF-Bold.ttf');
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* share class */
+/* ** page-size ** */ 
+
+body {
+    background: #E0E0E0;
+    margin: 0;
+}
+
+nav {
+    background-color: #F8F8F8;
+    margin: 0;
+    height: calc((12.5vh+12.5vw)/2);
+    width: 100%;
+    top: 0%;
+}
+
+main {
+    margin-top: calc((12.5vh+12.5vw)/2); 
+}
+
+
+main .pages {
+    padding: calc((23.75vh + 12.25vw)/4);
+    width: 100%;
+}
+
+
+/* ** object-size ** */ 
+
+img {
+    max-width: 100%;
+    max-height: 70vh;
+}
+
+.title {
+    font-size: 5vw;
+}
+
+
+
+
+/* each part */
+/* ** nav ** */
+
+
+nav a {
+    text-decoration: none;
+    color: #AAAEB5;
+    font-size: 1.8vw;
+}
+
+.nav-items, .logo {
+    display: inline-block;
+    margin: 0%;
+    padding: 1vh 3vw;
+}
+
+
+.nav-items a:hover {
+    color: #4D4F52;
+}
+
+.scrolling  {
+    color: #4D4F52 !important;
+}
+
+
+/* **Home** */
+
+#Home {
+    background-color: #EAC100;
+}
+
+.Home-button {
+    border-radius: 20px !important;
+    padding: 0.5em 5em !important;
+}
+
+
+
+/* ** Intro ** */
+.wrapper {
+    display: grid;
+    grid-auto-rows: calc((20vw+16vh));
+    gap: 20px;
+}
+
+#Intro p {
+    text-align: center;
+    color: #4D4F52
+}
+
+#Intro .wrapper {
+    width: 80%; 
+    grid-template-columns: repeat(3, 1fr);
+}
+#Intro img{
+    height: 100%;
+    width: 100%;
+}
+
+
+.IntroGrid {
+    position:relative;
+}
+
+/* **** hover: img, detail **** */
+/* **** ** img: black layer over img ** **** */
+/* **** ** text: text block over img ** **** */
+
+.overlay-Img {
+    background: rgba(0,0,0,0.7);
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    opacity: 0.7;
+    margin:0;
+    padding:0;
+    transition: all 0.4s ease-in-out 0s;
+}
+
+
+.overlay-detail {
+  position: absolute;
+  text-align: center;
+  padding: 0 1rem;
+  width: 100%;
+  top: 40%;
+  left: 50%;
+  opacity: 1;
+  transform: translate(-50%, -50%);
+  transition: all 0.3s ease-in-out 0s;
+
+  color: white;
+  font-size: 1.5vw;
+}
+
+  
+.IntroGrid:hover .overlay-Img{
+    opacity: 0;
+}
+
+.IntroGrid:hover .overlay-detail {
+    top: 50%;
+    left: 50%;
+    opacity: 0;
+}
+
+
+
+
+
+
+
+
+
+#Use {
+    padding: 70px 0 60px;
+}
+  
+#Use .Use-boxs {
+    padding: 30px 30px 25px 30px;
+    width: 100%;
+    position: relative;
+    text-align: center;
+    background: #fff;
+    border-radius: 12px;
+}
+  
+#Use .Use-boxs .number {
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 24px;
+    font-style: normal !important;
+    background: #106eea;
+    color: #fff;
+    width: 40px;
+    height: 40px;
+    line-height: 0;
+    border-radius: 50px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 5px 10px 0 rgba(107, 103, 103, 0.52);
+}
+
+#Use .Use-boxs .icon {
+    font-size: 50px;
+    margin: 10px auto;
+}
+  
+#Use .Use-boxs p {
+    font-size: 14px;
+}
+  
+.Use-button {
+    border-radius: 20px !important;
+    padding: 0.5em 2em !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ** Skill & footer ** */
+footer {
+    padding: calc((23.75vh + 12.25vw)/8);
+}
+
+
+footer .row {
+    width: 45vw;
+    text-align: center;
+}
+
+footer p{
+    font-size: 0.5vw; 
+    color: #4D4F52;
+}
+
