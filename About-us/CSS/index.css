@@ -17,7 +17,6 @@ body {
 }
 
 nav {
-    background-color: #F8F8F8;
     margin: 0;
     height: calc((12.5vh+12.5vw)/2);
     width: 100%;
@@ -32,6 +31,10 @@ main {
 main .pages {
     padding: calc((23.75vh + 12.25vw)/4);
     width: 100%;
+}
+
+nav, #Intro, #About {
+    background-color: #F5F5F5;
 }
 
 
@@ -51,7 +54,9 @@ img {
 
 /* each part */
 /* ** nav ** */
-
+nav ul {
+    margin-right: 3vw;
+}
 
 nav a {
     text-decoration: none;
@@ -62,23 +67,43 @@ nav a {
 .nav-items, .logo {
     display: inline-block;
     margin: 0%;
-    padding: 1vh 3vw;
+    padding: 1vh 1vw;
 }
 
+.logo img {
+    height: 100%;
+}
 
-.nav-items a:hover {
-    color: #4D4F52;
+.nav-items a:hover, .nav-items a img:hover  {
+    color: #3A3A3A;
 }
 
 .scrolling  {
-    color: #4D4F52 !important;
+    color: #3A3A3A !important;
 }
 
 
 /* **Home** */
 
 #Home {
-    background-color: #EAC100;
+    background: url(../SRC/IMG/homepage.png), #ECB800;
+    background-repeat: no-repeat;
+    background-position: right;
+    min-height: 60vh;
+}
+
+/*
+@media (max-width: ) {
+
+}*/
+
+#Home div {
+    padding: 7vh 10vw;
+}
+
+#Home .title {
+    font-size: calc((6vw+6vh));
+    font-weight: bold;
 }
 
 .Home-button {
@@ -89,28 +114,33 @@ nav a {
 
 
 /* ** Intro ** */
-.wrapper {
-    display: grid;
-    grid-auto-rows: calc((20vw+16vh));
-    gap: 20px;
-}
-
 #Intro p {
     text-align: center;
-    color: #4D4F52
+    color: #3A3A3A;
 }
 
 #Intro .wrapper {
-    width: 80%; 
+    width: 80%;
+    display: grid;
+    grid-auto-rows: calc((20vw+16vh));
     grid-template-columns: repeat(3, 1fr);
+    gap: 20px; 
 }
+
+@media (max-width: 540px) {
+    #Intro .wrapper {
+        width: 100%;
+    }
+}
+
+
 #Intro img{
     height: 100%;
     width: 100%;
 }
 
 
-.IntroGrid {
+.Intro-grids {
     position:relative;
 }
 
@@ -144,26 +174,20 @@ nav a {
   transform: translate(-50%, -50%);
   transition: all 0.3s ease-in-out 0s;
 
-  color: white;
+  color: #fff;
   font-size: 1.5vw;
 }
 
   
-.IntroGrid:hover .overlay-Img{
+.Intro-grids:hover .overlay-Img{
     opacity: 0;
 }
 
-.IntroGrid:hover .overlay-detail {
+.Intro-grids:hover .overlay-detail {
     top: 50%;
     left: 50%;
     opacity: 0;
 }
-
-
-
-
-
-
 
 
 
@@ -178,6 +202,7 @@ nav a {
     text-align: center;
     background: #fff;
     border-radius: 12px;
+    margin-bottom: 5vh;
 }
   
 #Use .Use-boxs .number {
@@ -187,7 +212,7 @@ nav a {
     transform: translateX(-50%);
     font-size: 24px;
     font-style: normal !important;
-    background: #106eea;
+    background: #5CA7E5;
     color: #fff;
     width: 40px;
     height: 40px;
@@ -203,16 +228,164 @@ nav a {
     font-size: 50px;
     margin: 10px auto;
 }
+
+#Use .Use-boxs #Use-icons-1 {
+    background: url('../SRC/IMG/use/how_01.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#Use .Use-boxs #Use-icons-2 {
+    background: url('../SRC/IMG/use/how_02.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#Use .Use-boxs #Use-icons-3 {
+    background: url('../SRC/IMG/use/how_03.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#Use .Use-boxs #Use-icons-4 {
+    background: url('../SRC/IMG/use/how_04.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#Use .Use-boxs #Use-icons-5 {
+    background: url('../SRC/IMG/use/how_05.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#Use .Use-boxs #Use-icons-6 {
+    background: url('../SRC/IMG/use/how_06.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
   
 #Use .Use-boxs p {
     font-size: 14px;
 }
   
 .Use-button {
+    border: none;
     border-radius: 20px !important;
     padding: 0.5em 2em !important;
+    background-color: #5CA7E5!important;
+    color: #fff;
+
 }
 
+#About p{
+    text-align: center;
+    color: #3A3A3A;
+}
+
+#About div {
+    height:  calc((15vh + 10vw));
+    position: relative;
+    filter: grayscale(100%);
+}
+
+#About div:hover {
+    filter: grayscale(0%);
+}
+
+#About div p {
+    display: none;
+    position: absolute;
+    font-size: 1vw;
+    bottom: -5em;
+    left: 30%;
+}
+
+#About #About-grids-1:hover p {
+    display: block;
+}
+
+#About #About-grids-2:hover p {
+    display: block;
+}
+
+#About #About-grids-3:hover p {
+    display: block;
+}
+
+#About #About-grids-4:hover p {
+    display: block;
+}
+
+#About #About-grids-5:hover p {
+    display: block;
+}
+
+#About #About-grids-6:hover p {
+    display: block;
+}
+
+#About #About-grids-7:hover p {
+    display: block;
+}
+
+#About #About-grids-1 {
+    background: url('../SRC/IMG/about/color_01.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+
+
+#About #About-grids-2 {
+    background: url('../SRC/IMG/about/color_02.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#About #About-grids-3 {
+    background: url('../SRC/IMG/about/color_03.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#About #About-grids-4 {
+    background: url('../SRC/IMG/about/color_04.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#About #About-grids-5 {
+    background: url('../SRC/IMG/about/color_05.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#About #About-grids-6 {
+    background: url('../SRC/IMG/about/color_06.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#About #About-grids-7 {
+    background: url('../SRC/IMG/about/color_07.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
 
 
 
@@ -246,6 +419,6 @@ footer .row {
 
 footer p{
     font-size: 0.5vw; 
-    color: #4D4F52;
+    color: #3A3A3A;
 }
 
