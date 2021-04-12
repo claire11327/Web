@@ -41,7 +41,7 @@ nav .nav-items {
   padding: 0.5em;
 }
 nav .logo img {
-  height: 85%;
+  max-height: 3em;
 }
 
 /* Home */
@@ -147,7 +147,7 @@ nav .logo img {
   height: 1.3em;
 }
 #Use .Use-boxs p {
-  font-size: 0.5vw;
+  font-size: 1vw;
 }
 #Use button {
   background-color: #5CA7E5;
