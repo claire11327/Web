@@ -42,6 +42,7 @@ nav .nav-items {
 }
 nav .logo img {
   max-height: 3em;
+  content: url("../SRC/IMG/logo.png");
 }
 
 /* Home */
