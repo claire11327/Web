@@ -1,9 +1,3 @@
-@font-face {
-    font-family: Bodoni;
-    src: url('../SRC/FONT/BodoniFLF-Bold.ttf');
-}
-
-
 html {
     scroll-behavior: smooth;
 }
@@ -91,10 +85,6 @@ nav a {
     min-height: 60vh;
 }
 
-/*
-@media (max-width: ) {
-
-}*/
 
 #Home div {
     padding: 7vh 10vw;
@@ -145,9 +135,6 @@ nav a {
     width: 100%;
     height: 100%;
 }
-/* **** hover: img, detail **** */
-/* **** ** img: black layer over img ** **** */
-/* **** ** text: text block over img ** **** */
 
 .overlay-Img {
     background: rgba(0,0,0,0.7);
@@ -316,33 +303,12 @@ nav a {
     left: 30%;
 }
 
-#About #About-grids-1:hover pre {
+#About div:hover > pre {
     display: block;
 }
 
-#About #About-grids-2:hover pre {
-    display: block;
-}
 
-#About #About-grids-3:hover pre {
-    display: block;
-}
 
-#About #About-grids-4:hover pre {
-    display: block;
-}
-
-#About #About-grids-5:hover pre {
-    display: block;
-}
-
-#About #About-grids-6:hover pre {
-    display: block;
-}
-
-#About #About-grids-7:hover pre {
-    display: block;
-}
 
 #About #About-grids-1 {
     background: url('../SRC/IMG/about/color_01.jpg');
@@ -394,7 +360,6 @@ nav a {
     background-repeat: no-repeat;
     background-position: center;
 }
-
 
 
 
