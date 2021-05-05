@@ -5,5 +5,29 @@
     </head>
     <body>
         <iframe data-lang="zh_Hant" data-type="share-a" data-ver="3" data-url="https://claire11327.github.io/Web/Uidd2021/share.html" data-color="default" data-size="large" data-count="false" data-line-it-id="9" scrolling="no" frameborder="0" allowtransparency="true" style="width: 76px; height: 30px; visibility: visible; position: static !important; opacity: 1 !important;" class="line-it-button" src="https://social-plugins.line.me/widget/share?url=https%3A%2F%2Fclaire11327.github.io%2FWeb%2FUidd2021%2Fshare.html&amp;buttonType=share-a&amp;size=large&amp;count=false&amp;color=default&amp;lang=zh_Hant&amp;type=share&amp;ver=3&amp;id=9&amp;origin=https%3A%2F%2Fsocial-plugins.line.me%2Fzh_TW%2Fhow_to_install%23lineitbutton&amp;title=LINE%20Social%20Plugins" title="Share this page on LINE."></iframe>
+    
+        <!-- Line 分享按鈕 -->
+    <script>
+        //<![CDATA[
+        (function() {
+        var img = "http://2.bp.blogspot.com/-tsIDMPhBx18/VPGxHZtjsnI/AAAAAAAALIU/1b_VO721HDw/s1600/line-share-button.png", // line 按鈕圖示
+        title = document.title,
+        url = "http://" + location.hostname + location.pathname,
+        href, html;
+        
+        // 行動裝置語法
+        if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+        href = "http://line.naver.jp/R/msg/text/?" + title + "%0D%0A" + url;
+        } else {
+        // 網頁版語法
+        href = "https://lineit.line.me/share/ui?url=" + encodeURIComponent(url);
+        }
+        html = "<a href='" + href + "' target='_blank'><img src='" + img + "'/></a>";
+        document.write(html);
+        })();
+        //]]>
+        </script>
+        <!-- Designed by WFU BLOG -->
+        
     </body>
 </html>
