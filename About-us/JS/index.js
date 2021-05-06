@@ -31,7 +31,6 @@ function isScrolledIntoView(elem) {
   
     var elemTop = $(elem).offset().top;
     var elemBottom = elemTop + ($(elem).height()*2/3);
-    console.log(elemTop , docViewTop,elemBottom , docViewBottom);
     return ((elemBottom <= docViewBottom) && (elemTop >= docViewTop));
 }
 
