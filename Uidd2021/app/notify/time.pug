@@ -1,17 +1,28 @@
 extends ../layout.pug
 block variables
     - var siteTitle = '我的提醒'
-    - var pTitle = '新增提醒時間'
-    - var btnText = '新增提醒'
+    - var btnText = '新增藥物'
+
+block append css
+    link(href="../../css/time.css" rel="stylesheet" type="text/css")
 
 
-block content  
-    // clock
+block title
 
-    p.title= '選擇藥物'
+block content
+    - var i = 0;
+    - var data = {'8:00':{img: ['1.jpeg', '2.jpeg', '3.jpeg'],name: ['心臟藥', '心臟藥', '心臟藥']},'12:00':{img: ['4.jpeg', '5.jpeg', '6.jpeg'],name: ['心臟藥', '心臟藥', '心臟藥']},'13:00':{img: ['1.jpeg', '2.jpeg', '3.jpeg'],name: ['心臟藥', '心臟藥', '心臟藥']}}
+
+        
+    each time, key in data
+        p.time  #{key}
+        .row.row-cols-3.justify-content-around.mx-auto
+            each img, index in time["img"]
+                .med-imgs.col-sm-3.mt-2.pb-5
+                        img(src="../../src/img/notify/"+ img)
+                        .med-name.shadow
+                            | #{time["name"][index]}
+        .row.justify-content-around.mt-2
+            input(type="button" value="刪除").deletebtn.col.btn 
+            input(type="button" value="編輯").editbtn.col.btn
     
-
-    p.row.justify-content-center.mt-5
-        img.col-sm-3
-        img.col-sm-3
-

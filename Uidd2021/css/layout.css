@@ -19,6 +19,10 @@ button {
     bottom: 5em;
     border-radius: 12px  !important;
       
-    width: 70vw;
-    max-width: 440px;
+    width: 68vw;
+    max-width: 430px;
+}
+
+.btnHeight {
+    height: 10em;
 }

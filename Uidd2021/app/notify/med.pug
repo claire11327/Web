@@ -41,13 +41,13 @@ block content
                 if(index < 3)
                     .med-imgs.col-sm-4.mt-2
                         img(src="../../src/img/notify/"+ img)
-                        input(type="checkbox" name="medChoose[]" id=img).form-check-input
+                        input(type="checkbox" name="medChoose[]" onchange="change()").form-check-input
                         .medName.shadow(id="medName_"+index)
                             | #{nameData[index]}
                 else
                     .med-imgs.col-sm-4.mt-5
                         img(src="../../src/img/notify/"+ img)
-                        input(type="checkbox" name="medChoose[]" id=img).form-check-input
+                        input(type="checkbox" name="medChoose[]" onchange="change()").form-check-input
                         .medName.shadow(id="medName_"+index)
                             | #{nameData[index]}
 
@@ -59,7 +59,7 @@ block content
 
 
 block footer
-    button(onclick="next()" type="button" id="nextbtn").btn.btn-dark.mx-auto= btnText[0]
+    button(onclick="next()" type="button" id="nextbtn" disabled).btn.btn-dark.mx-auto= btnText[0]
     button(onclick="back()" type="button" id="backbtn").btn.btn-dark.mx-auto= btnText[1]
     
     button(type="button" id="submitbtn").btn.btn-dark.mx-auto= btnText[2]

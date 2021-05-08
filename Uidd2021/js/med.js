@@ -1,4 +1,11 @@
-//url : notify-detail
+
+
+var cboxs = $('.form-check-input');
+function change(){
+    $('#nextbtn').prop('disabled', cboxs.filter(':checked').length > 0);
+    
+}
+
 
 function next() {
     
@@ -10,18 +17,20 @@ function next() {
         // display & write  innerhtml of classname="pillDecision"
         $(".pillChosen")[0].style.display = 'initial';
         
+        imgSrc = document.querySelectorAll('.med-imgs img');
+        nameSrc = document.querySelectorAll('.medName');
+
         var string = '<div class="row row-cols-3">'
         choices.forEach(function(item) {
             string = string.concat('<div class="med-imgs col-sm-4 mt-3">');
-            string = string.concat('<img src="../../src/img/notify/'+item+'">');
+            string = string.concat('<img src="'+imgSrc[item].src+'">');
             //                        .medName.shadow(id="medName_"+index)
             // | #{nameData[index]}
-            string = string.concat('<div class="medName shadow" id="medName_5">心臟藥</div>');
+            string = string.concat('<div class="medName shadow" id="medName_5">'+nameSrc[item].innerHTML+'</div>');
             string = string.concat('</div>');
         })
         string = string.concat('</div>');
         $(".pillChosen")[0].innerHTML = string
-        console.log(string);
         // display:         timeCheck
         $(".timeCheck")[0].style.display = 'initial';
         
@@ -51,9 +60,9 @@ function back() {
 
 function check(){
     var check_val = [];
-    $('input[type="checkbox"]').each(function() {
+    $('input[type="checkbox"]').each(function(index) {
         if(this.checked)
-            check_val.push(this.id)  
+            check_val.push(index)  
     });
     return check_val;
 }
