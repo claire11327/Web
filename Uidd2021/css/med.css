@@ -4,6 +4,8 @@
     padding-right: 0;
 }
 
+
+
 img {
     width: 100%;
     height: 100%;
@@ -20,6 +22,7 @@ img {
 
 .roll-time {
     margin-left: 2vw !important;
+    width: 70vw;
 }
 
 input[type='checkbox'] {
@@ -30,7 +33,7 @@ input[type='checkbox'] {
 
 
 input[type="text"], pre {
-    font-size: 4em;
+    font-size: 3em;
     display: inline;    
 }
 
@@ -46,9 +49,12 @@ pre {
     white-space: normal;
 }
 
+button {
+    width: 72vw;
+}
 
 #backbtn, #submitbtn {
-    width: 37vw;
+    width: 35vw;
     max-width: 220px;
     display: none;
 }
