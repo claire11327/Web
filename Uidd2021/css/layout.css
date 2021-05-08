@@ -23,6 +23,15 @@ button {
     max-width: 430px;
 }
 
+
+.blank {
+    position: fixed;
+    bottom: 5em;
+    height: 5em;
+    width: 100vw;
+}
+
+
 .btnHeight {
     height: 10em;
 }
