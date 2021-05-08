@@ -16,7 +16,7 @@ body {
 
 button {
     position: fixed;
-    bottom: 5em;
+    bottom: 3em;
     border-radius: 12px  !important;
       
     width: 68vw;
@@ -26,9 +26,10 @@ button {
 
 .blank {
     position: fixed;
-    bottom: 5em;
-    height: 5em;
+    bottom: 0;
+    height: 7em;
     width: 100vw;
+    background-color:white;  
 }
 
 
