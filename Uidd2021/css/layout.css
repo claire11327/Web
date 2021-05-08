@@ -1,0 +1,24 @@
+
+body {
+    margin: 0;
+}
+.wrapper {
+    width: 100vw;
+    max-width: 550px;
+}
+
+.title {
+    font-weight: bold;
+    margin-bottom: 1em;
+    font-size: 1.5em;
+}
+
+
+button {
+    position: fixed;
+    bottom: 5em;
+    border-radius: 12px  !important;
+      
+    width: 70vw;
+    max-width: 440px;
+}
