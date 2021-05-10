@@ -40,14 +40,16 @@ block content
             each img, index in imgData
                 if(index < 3)
                     .med-imgs.col-sm-4.mt-2
-                        img(src="../../src/img/notify/"+ img)
-                        input(type="checkbox" name="medChoose[]" onchange="change()").form-check-input
+                        label(for="cbox_"+index) 
+                            img(src="../../src/img/notify/"+ img)
+                        input(type="checkbox" name="medChoose[]" id="cbox_"+index onchange="change()").form-check-input
                         .medName.shadow(id="medName_"+index)
                             | #{nameData[index]}
                 else
                     .med-imgs.col-sm-4.mt-5
-                        img(src="../../src/img/notify/"+ img)
-                        input(type="checkbox" name="medChoose[]" onchange="change()").form-check-input
+                        label(for="cbox_"+index) 
+                            img(src="../../src/img/notify/"+ img onclick="clickimg()")
+                        input(type="checkbox" name="medChoose[]" id="cbox_"+index onchange="change()").form-check-input
                         .medName.shadow(id="medName_"+index)
                             | #{nameData[index]}
 

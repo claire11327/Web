@@ -1,10 +1,26 @@
 
 
 var cboxs = $('.form-check-input');
+
+
+
 function change(){
     $('#nextbtn').prop('disabled', cboxs.filter(':checked').length > 0);
     
 }
+
+/*
+function clickimg(){
+    if(this.index_data){
+        setIndex();
+    }
+    
+    //setIndex();
+    console.log(this.src);
+    //change();
+    
+}
+*/
 
 
 function next() {
