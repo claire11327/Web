@@ -48,6 +48,7 @@ input[type="button"] {
 
 .deletebtn.btn:hover {
     background-color: #D1513F;
+    color: #FFFFFF;
 }
 
 .editbtn {
@@ -59,4 +60,5 @@ input[type="button"] {
 
 .editbtn.btn:hover {
     background-color: #225783;
+    color: #FFFFFF;
 }
