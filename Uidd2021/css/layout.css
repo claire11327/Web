@@ -5,6 +5,7 @@ body {
 .wrapper {
     width: 100vw;
     max-width: 550px;
+    padding: 5vw;
 }
 
 .title {
@@ -18,14 +19,15 @@ button {
     position: fixed;
     bottom: 3em;
     border-radius: 12px  !important;
-      
-    width: 68vw;
-    max-width: 430px;
+
+    width: 84vw;
+    max-width: 470px;
 }
 
 
 .blank {
     position: fixed;
+    left: 0%;
     bottom: 0;
     height: 7em;
     width: 100vw;
