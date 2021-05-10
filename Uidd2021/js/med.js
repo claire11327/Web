@@ -9,19 +9,6 @@ function change(){
     
 }
 
-/*
-function clickimg(){
-    if(this.index_data){
-        setIndex();
-    }
-    
-    //setIndex();
-    console.log(this.src);
-    //change();
-    
-}
-*/
-
 
 function next() {
     
