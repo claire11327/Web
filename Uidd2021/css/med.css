@@ -53,6 +53,7 @@ input[type="text"] {
 
 pre {
     white-space: normal;
+    z-index: -1;
 }
 
 
