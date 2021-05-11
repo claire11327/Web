@@ -70,11 +70,21 @@ button {
     background-color: #A4A4A4;
 }
 
+#cancelbtn:hover, #backbtn:hover{
+    background-color: #7D7D7D;
+}
+
 #nextbtn, #submitbtn {
     float: right;
     left: 53%;
     background-color: #27AE60;
 }
+
+#nextbtn:hover, #submitbtn:hover {
+    background-color: #219357;
+}
+
+
 
 
 .timeCheck, .pillChosen {
