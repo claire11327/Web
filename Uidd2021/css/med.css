@@ -57,17 +57,47 @@ pre {
     z-index: -1;
 }
 
-
-#backbtn, #submitbtn {
+button {
     width: 35vw;
     max-width: 220px;
+    color: #FFFFFF !important;
+}
+
+
+#backbtn, #submitbtn {
     display: none;
 }
 
-#submitbtn {
+#cancelbtn, #backbtn{
+    background-color: #A4A4A4;
+}
+
+#nextbtn, #submitbtn {
     float: right;
     left: 53%;
+    background-color: #27AE60;
 }
+
+
+/*
+#cancelbtn, #nextbtn, #backbtn, #submitbtn {
+    width: 35vw;
+    max-width: 220px;
+    display: none;
+    color: #FFFFFF;
+}
+
+#cancelbtn, #backbtn{
+    background-color: #A4A4A4;
+}
+
+#nextbtn, #submitbtn {
+    float: right;
+    left: 53%;
+    background-color: #27AE60;
+}
+
+*/
 
 
 .timeCheck, .pillChosen {

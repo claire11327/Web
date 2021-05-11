@@ -2,7 +2,7 @@ extends ../layout.pug
 block variables
     - var siteTitle = '我的提醒'
     - var pTitle = ['新增提醒時間','選擇藥物']
-    - var btnText = ['下一步', '重新選擇藥物', '完成']
+    - var btnText = ['取消', '下一步', '重新選擇藥物', '完成']
 
 block append css
     link(href="../../css/med.css" rel="stylesheet" type="text/css")
@@ -62,10 +62,11 @@ block content
 
 block footer
     .blank
-    button(onclick="next()" type="button" id="nextbtn" disabled).btn.btn-dark.mx-auto= btnText[0]
-    button(onclick="back()" type="button" id="backbtn").btn.btn-dark.mx-auto= btnText[1]
+    button(type="button" id="cancelbtn" ).btn.mx-auto= btnText[0]
+    button(onclick="next()" type="button" id="nextbtn" disabled).btn.mx-auto= btnText[1]
+    button(onclick="back()" type="button" id="backbtn").btn.mx-auto= btnText[2]
     
-    button(type="button" id="submitbtn").btn.btn-dark.mx-auto= btnText[2]
+    button(type="button" id="submitbtn").btn.mx-auto= btnText[3]
     p.btnHeight
 
     

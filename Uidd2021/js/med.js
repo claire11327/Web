@@ -5,8 +5,7 @@ var cboxs = $('.form-check-input');
 
 
 function change(){
-    $('#nextbtn').prop('disabled', cboxs.filter(':checked').length > 0);
-    
+    $('#nextbtn').prop('disabled', $('.form-check-input:checked').length == 0);
 }
 
 
@@ -38,7 +37,6 @@ function next() {
         $(".timeCheck")[0].style.display = 'initial';
         
         // button display
-        $("#nextbtn").css('display','none');
         $("#backbtn").css('display','initial');
         $("#submitbtn").css('display','initial');
 
