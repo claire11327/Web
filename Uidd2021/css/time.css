@@ -43,7 +43,7 @@ input[type="button"] {
     background-color: #FD614B;
     background-image: url("../src/img/delete.png");
     background-repeat: no-repeat;
-    background-position: 23% 45%;
+    background-position: 40% 45%;
 }
 
 .deletebtn.btn:hover {
