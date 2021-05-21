@@ -17,7 +17,10 @@ function next() {
         $(".pillCheck")[0].style.display = 'none';
 
         // display & write  innerhtml of classname="pillDecision"
-        $(".pillChosen")[0].style.display = 'initial';
+        $(".pillChosen")[0].style.display = 'block';
+
+        $(".wrapper").css('padding','0');
+        $(".content").css('padding','0');
         
         imgSrc = document.querySelectorAll('.med-imgs img');
         nameSrc = document.querySelectorAll('.medName');
@@ -39,6 +42,8 @@ function next() {
         // button display
         $("#backbtn").css('display','initial');
         $("#submitbtn").css('display','initial');
+        $("#cancelbtn").css('display','none');
+        $("#nextbtn").css('display','none');
 
     }
     
@@ -52,6 +57,9 @@ function back() {
     $(".pillChosen")[0].style.display = 'none';
     // display:none .timeCheck
     $(".timeCheck")[0].style.display = 'none';
+
+    $(".wrapper").css('padding','5vw');
+    $(".content").css('padding','auto');
 
     // button display
     $("#nextbtn").css('display','initial');

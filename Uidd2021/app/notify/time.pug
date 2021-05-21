@@ -11,18 +11,20 @@ block title
 
 block content
     - var i = 0;
-    - var data = {'08:00':{img: ['1.jpeg', '2.jpeg', '3.jpeg'],name: ['心臟藥', '心臟藥', '心臟藥']},'12:00':{img: ['4.jpeg', '5.jpeg', '6.jpeg'],name: ['心臟藥', '心臟藥', '心臟藥']},'13:00':{img: ['1.jpeg', '2.jpeg', '3.jpeg'],name: ['心臟藥', '心臟藥', '心臟藥']}}
+    - var data = {'08:00':{img: ['1.jpeg', '2.jpeg', '3.jpeg','1.jpeg', '2.jpeg', '3.jpeg'],name: ['心臟藥', '心臟藥', '心臟藥','心臟藥', '心臟藥', '心臟藥']},'12:00':{img: ['4.jpeg', '5.jpeg', '6.jpeg'],name: ['心臟藥', '心臟藥', '心臟藥']},'13:00':{img: ['1.jpeg', '2.jpeg', '3.jpeg'],name: ['心臟藥', '心臟藥', '心臟藥']}}
+
 
         
     each time, key in data
-        p.time  #{key}
-        .row.row-cols-3.justify-content-around.mx-auto.px-1
+        .time.form-check.form-switch  #{key}
+            input.form-check-input(type="checkbox")
+        .row.justify-content-around.mx-auto.px-1.med_div
             each img, index in time["img"]
                 .med-imgs.col-sm-3.mt-2.pb-5.px-1
                         img(src="../../src/img/notify/"+ img)
                         .med-name.shadow
                             | #{time["name"][index]}
-        .row.justify-content-around.mt-2
-            input(type="button" value="刪除").deletebtn.col.btn.shadow
-            input(type="button" value="編輯").editbtn.col.btn.shadow
+        .row.mx-auto
+            input(type="button" value="刪除").deletebtn.col.btn
+            input(type="button" value="編輯").editbtn.col.btn
     

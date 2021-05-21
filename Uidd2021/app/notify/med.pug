@@ -17,18 +17,18 @@ block title
 
 block content
     .timeCheck
-        p.title.check= pTitle[0]
 
-        .roll-time
+        .roll-time.mx-auto.my-5
             input(type="text" id="hour" name="hour" placeholder="" readonly)
             pre :
             input(type="text" id="min" name="min" placeholder="" readonly)
 
 
 
-    p.title= pTitle[1]
+    
     .pillCheck
-        p 請至少選擇一種藥物
+        p.title= pTitle[1]
+        p 請選擇1~10種藥物
         
 
         //script AJAX get data

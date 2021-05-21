@@ -8,6 +8,10 @@ body {
     padding: 5vw;
 }
 
+.content {
+    padding: 0;
+}
+
 .title {
     font-weight: bold;
     margin-bottom: 1em;
