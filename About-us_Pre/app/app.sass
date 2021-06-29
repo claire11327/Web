@@ -1,330 +1,399 @@
-
-
-$lg-color: #3A3A3A
-$sm-color: #4D4F52
-
-$sm-page: calc((12.5vh+12.5vw)/2)
-$lg-padding: calc((23.75vh + 12.25vw)/4)
-$md-padding: 2em
-$sm-padding: .8em
-
-$bg-color: #F8F8F8
-
-$lg-fsize: 5.2vw
-$md-fsize: 1.8vw
-$sm-fsize: 1.2vw
-$xs-fsize: 0.5vw
-
-$medium-screen: 1000px
-$small-screen:750px
-
-
-$bd-radius: 20px
-
-=bgImg($imgUrl)
-    background: url($imgUrl)
-    background-size:  contain
-    background-repeat: no-repeat
-    background-position: center
-
-
-html 
-    scroll-behavior: smooth
+html {
+    scroll-behavior: smooth;
+}
 
 /* share class */
-/*  page-size  */ 
+/* ** page-size ** */ 
 
-body 
-    background: #E0E0E0
-    margin: 0
-    max-width: 100vw
-    text-align: center
+body {
+    background: #E0E0E0;
+    margin: 0;
+}
+
+nav {
+    margin: 0;
+    height: calc((12.5vh+12.5vw)/2);
+    width: 100%;
+    top: 0%;
+}
+
+main {
+    margin-top: calc((12.5vh+12.5vw)/2); 
+}
 
 
-main .pages 
-    padding: $lg-padding
+main .pages {
+    padding: calc((23.75vh + 12.25vw)/4);
+    width: 100%;
+}
+
+nav, #Intro, #About {
+    background-color: #F5F5F5;
+}
 
 
-nav, #Use, footer
-    background-color: $bg-color
+/* ** object-size ** */ 
+
+img {
+    max-width: 100%;
+    max-height: 70vh;
+}
+
+.title {
+    font-size: 5vw;
+}
+
+
 
 
 /* each part */
-/*  nav  */
-nav 
-    height: $sm-page
-    top: 0%
-    font-weight: bold
-    width: 100vw
+/* ** nav ** */
+nav ul {
+    margin-right: 3vw;
+}
 
-    ul 
-        //margin-right: 2em
-        text-align: center    
-    
-    a 
-        color: #4D4F52 !important
-        text-decoration: none
+nav a {
+    text-decoration: none;
+    color: #3A3A3A;
+    font-size: calc((2.5vw+2vh)/2);
+}
 
-    a:hover, .scrolling
-        text-decoration: underline
+.nav-items, .logo {
+    display: inline-block;
+    padding: 1vh 1vw;
+}
 
-    .nav-items
-        display: inline-block
-        padding-right: $md-padding
-        font-size: 1.3vw
+.logo img {
+    height: 80%;
+}
 
-    .logo
-        margin-left: 3em
-        font-size: 1.7vw
+.nav-items a:hover, .nav-items a img:hover  {
+    color: #3A3A3A;
+}
 
-    .logo img 
-        height: 2vw
-        content: url("../SRC/IMG/logo.png")
-        min-height: 20px
-        vertical-align: text-bottom !important
+.scrolling  {
+    text-decoration:underline;
+}
 
-.blank
-    height: $sm-page
 
-/* Home */
+/* **Home** */
 
-#Home 
-    background: url(../SRC/IMG/home.jpg), #DFDFDF
-    background-position: right
-    background-repeat: no-repeat
-    min-height: 60vh
-    background-size: 90vw, auto
-    text-align: left
+#Home {
+    background: url(../SRC/IMG/homepage.png), #ECB800;
+    background-repeat: no-repeat;
+    background-position: right;
+    min-height: 60vh;
+}
 
-    @media (max-width: $medium-screen)
-        #title
-            font-size: 9vw !important
-    @media (max-width: $small-screen)
-        background: url(../SRC/IMG/home-overlayed.png)
-        background-position: center
-        background-repeat: no-repeat
-        min-height: 60vh
-        background-size: 100vw, auto
-        
-        dd
-            color: #FFFFFF !important
+
+#Home div {
+    padding: 7vh 10vw;
+}
+
+#Home .title {
+    font-size: calc((6vw+6vh));
+    font-weight: bold;
+}
+
+.Home-button {
+    border-radius: 20px !important;
+    padding: 0.5em 5em !important;
+}
 
 
 
+/* ** Intro ** */
+#Intro p {
+    text-align: center;
+    color: #3A3A3A;
+}
 
-    div 
-        //padding: $lg-padding
-        color: #27AE60
-        dd
-            color: #4D4F52
+#Intro .wrapper {
+    width: 80%;
+    display: grid;
+    grid-auto-rows: calc((20vw+16vh));
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px; 
+}
 
-
-    .Home-button 
-        border-color: #FDCD0D
-        border-radius: $bd-radius !important
-        padding: 0.5em 5em !important
-        background-color: #FDCD0D
-
-    .Home-button:hover
-        color: #4D4F52
-        background-color: #DFDFDF
-
-    #title 
-        font-size: $lg-fsize
-        font-weight: bold
-    
-    dd
-        font-size: $sm-fsize
-
-
-
-/*  Intro  */
-#Intro 
-    text-align: left !important
-    h3
-        color: #27AE60
-        font-weight: bold
-    p 
-        color: #4D4F52
-
-    .row 
-        width: 100%
-        @media (max-width: $medium-screen)
-            .row 
-                width: 100%
-                display: block !important
-                overflow-x: scroll !important
-                white-space: nowrap !important
-                overflow-y: hidden
-        @media (max-width: $small-screen)
-            .col-xs-7 .row 
-                margin-bottom: 2em
-
-    #hidden-Intro
-        display: none
-
-    $icons: 3
-    @for $i from 0 to $icons 
-        .row .col-xs-7 .row div:nth-child(#{$i+1})
-                display: inline-block
-                height: 100%
-                min-height: 60vh
-                width: 100%
-                +bgImg('../SRC/IMG/intro/Intro#{$i+1}.jpg')
-    
-    
+@media (max-width: 540px) {
+    #Intro .wrapper {
+        width: 100%;
+    }
+}
 
 
 
 
+.Intro-grids {
+    position:relative;
+}
+
+.Intro-grids img {
+    position:relative;
+    content:url("../SRC/IMG/intro/scenario.png");
+    width: 100%;
+    height: 100%;
+}
+
+.overlay-Img {
+    background: rgba(0,0,0,0.7);
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    opacity: 0.7;
+    margin:0;
+    padding:0;
+    transition: all 0.4s ease-in-out 0s;
+    z-index: 1;
+}
 
 
-/* Use */ 
-#Use 
+.overlay-detail {
+  position: absolute;
+  text-align: center;
+  padding: 0 1rem;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  opacity: 1;
+  transform: translate(-50%, -50%);
+  transition: all 0.3s ease-in-out 0s;
+  z-index: 2;
 
-    @media (max-width: $small-screen)
-        .row 
-            width: 100%
-            display: block !important
-            overflow-x: scroll !important
-            white-space: nowrap !important
-            overflow-y: hidden
-        
-            .col-xl-2 
-                display: inline-block
-                margin-right: 3em
-            
-            .col-xl-2:nth-last-child(1)
-                margin-right: 2.8em
-
-            button
-                display: none
-
-
-
-            .Use-boxs 
-                margin-bottom: 0.3em
-                margin-top: 2em
-    
-    .Use-boxs 
-        background: #fff
-        border-radius: 12px
-        padding-top: $md-padding
-        padding-bottom: $md-padding
-        position: relative
-        margin-bottom: 2em
-        min-width: 120px
-
+  color: #fff;
+  font-size: 1.5vw;
+}
 
   
-        .number 
-            align-items: center
-            background: #27AE60
-            border-radius: 50px
-            box-shadow: 0px 5px 10px 0 rgba(107, 103, 103, 0.52)
-            color: #fff
-            display: inline-flex
-            font-size: $sm-fsize   
-            font-style: normal !important
-            height: 40px
-            justify-content: center
-            line-height: 0
-            position: absolute
-            left: 50%
-            top: -20px
-            transform: translateX(-50%)
-            width: 40px
+.Intro-grids:hover .overlay-Img{
+    opacity: 0;
+}
 
-
-        .icon 
-            font-size: $lg-fsize
-            margin: 0.3em auto
-            height: 0.8em
-            min-height: 50px
-
-
-        p 
-            font-size: 1vw    //change
-            margin: 0!important
-            color: #4D4F52
-
-
-    button 
-        background-color: #27AE60
-        border: 1px solid #27AE60
-        border-radius: 35px
-        color: #fff
-        font-weight: bold
-        padding: $sm-padding $md-padding
-        margin-top: 2em
-
-        &:hover 
-            background-color: #fff
-            color:  #27AE60
-    
-$icons: 6
-@for $i from 0 to $icons 
-    #Use .row div:nth-child(#{$i+1}) .icon 
-        +bgImg('../SRC/IMG/use/0#{$i+1}.png')
-    
-
-
-/* About */
-
-#About 
-    p
-        color: #3A3A3A
-
-
-    div 
-        filter: grayscale(100%)
-        height:  calc((15vh + 10vw))
-        position: relative
-
-        &:hover 
-            filter: grayscale(0%)
-
-        pre 
-            bottom: -5em
-            display: none
-            position: absolute
-            left: 30%
-
-
-        &:hover > pre 
-            display: block
-
-    @media (max-width: $small-screen)
-        div 
-            filter: grayscale(0%)
-            
-            pre
-                left: -5%
-                bottom: -3em
-            
+.Intro-grids:hover .overlay-detail {
+    top: 50%;
+    left: 50%;
+    opacity: 0;
+}
 
 
 
+#Use {
+    padding: 70px 0 60px;
+}
+  
+#Use .Use-boxs {
+    padding: 30px 30px 25px 30px;
+    width: 100%;
+    position: relative;
+    text-align: center;
+    background: #fff;
+    border-radius: 12px;
+    margin-bottom: 5vh;
+}
+  
+#Use .Use-boxs .number {
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 24px;
+    font-style: normal !important;
+    background: #5CA7E5;
+    color: #fff;
+    width: 40px;
+    height: 40px;
+    line-height: 0;
+    border-radius: 50px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 5px 10px 0 rgba(107, 103, 103, 0.52);
+}
+
+#Use .Use-boxs .icon {
+    font-size: 50px;
+    margin: 10px auto;
+    height: 1.3em;
+}
+
+#Use .Use-boxs #Use-icons-1 {
+    background: url('../SRC/IMG/use/how_01.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#Use .Use-boxs #Use-icons-2 {
+    background: url('../SRC/IMG/use/how_02.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#Use .Use-boxs #Use-icons-3 {
+    background: url('../SRC/IMG/use/how_03.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#Use .Use-boxs #Use-icons-4 {
+    background: url('../SRC/IMG/use/how_04.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#Use .Use-boxs #Use-icons-5 {
+    background: url('../SRC/IMG/use/how_05.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#Use .Use-boxs #Use-icons-6 {
+    background: url('../SRC/IMG/use/how_06.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+  
+#Use .Use-boxs p {
+    font-size: 14px;
+}
+  
+#Use-button {
+    border: 1px solid #5CA7E5;
+    border-radius: 20px;
+    padding: 0.5em 2em;
+    background-color: #5CA7E5;
+    color: #fff;
+}
+
+#Use-button:hover {
+    background-color: #fff;
+    color: #5CA7E5;
+}
+
+#About p{
+    text-align: center;
+    color: #3A3A3A;
+}
+
+#About div {
+    height:  calc((15vh + 10vw));
+    position: relative;
+    filter: grayscale(100%);
+}
+
+#About div:hover {
+    filter: grayscale(0%);
+}
+
+#About div pre {
+    display: none;
+    position: absolute;
+    font-size: 1vw;
+    bottom: -5em;
+    left: 30%;
+}
+
+#About div:hover > pre {
+    display: block;
+}
 
 
 
 
-$icons: 7
-@for $i from 0 to $icons 
-    #About .col:nth-child(#{$i+1}) 
-        +bgImg('../SRC/IMG/about/color_0#{$i+1}.png')
+#About #About-grids-1 {
+    background: url('../SRC/IMG/about/color_01.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
 
 
-/* footer */
-footer 
-    margin: 0
-    
-    .row 
-        width: 45vw
 
-    p
-        font-size: $xs-fsize
-        color: #4D4F52
-        margin: 2em !important
+#About #About-grids-2 {
+    background: url('../SRC/IMG/about/color_02.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
 
+#About #About-grids-3 {
+    background: url('../SRC/IMG/about/color_03.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#About #About-grids-4 {
+    background: url('../SRC/IMG/about/color_04.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#About #About-grids-5 {
+    background: url('../SRC/IMG/about/color_05.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#About #About-grids-6 {
+    background: url('../SRC/IMG/about/color_06.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#About #About-grids-7 {
+    background: url('../SRC/IMG/about/color_07.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ** Skill & footer ** */
+footer {
+    margin: 0;
+    height: calc((12.5vh+12.5vw)/2);
+}
+
+
+footer .row {
+    width: 45vw;
+    text-align: center;
+}
+
+footer p{
+    margin: 2em !important;
+    font-size: 0.5vw; 
+    color: #4D4F52;
+}
 
