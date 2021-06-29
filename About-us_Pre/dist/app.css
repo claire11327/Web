@@ -307,6 +307,15 @@ nav .logo img {
 #About div:hover > pre {
   display: block;
 }
+@media (max-width: 750px) {
+  #About div {
+    filter: grayscale(0%);
+  }
+  #About div pre {
+    left: -5%;
+    bottom: -3em;
+  }
+}
 
 #About .col:nth-child(1) {
   background: url("../SRC/IMG/about/color_01.png");

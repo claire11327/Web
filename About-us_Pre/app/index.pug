@@ -78,9 +78,10 @@ body
                 我們結合上課所學及使用者調研產生出藥物提醒聊天機器人。
             .row
                 - var name = ["傅立威", "謝秉穎", "蘇柏銜", "李姿儀", "周郁婕", "黃盈慈", "田哲嘉"];
-                each dpt, index in ["Linebot工程師", "Linebot工程師", "Linebot工程師", " 設計師", "後端工程師", "前端工程師", "前端工程師"]
+                - var short_pro= ["Linebot工程師", " 設計師", "網頁工程師"]
+                each pro, index in ["Linebot工程師", "Linebot工程師", "Linebot工程師", " 設計師", "後端工程師", "前端工程師", "前端工程師"]
                     .col(id="About-grids-"+ (index+1))
-                        pre= dpt+ "\n "+ name[index]
+                        pre= pro+ "\n "+ name[index]
         footer
             .d-flex.justify-content-center
                 .row.my-auto
