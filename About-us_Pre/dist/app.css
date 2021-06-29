@@ -44,17 +44,21 @@ nav .nav-items {
 }
 nav .logo {
   margin-left: 3em;
-  font-size: 25px;
+  font-size: 22px;
 }
 nav .logo img {
   height: 2vw;
   content: url("../SRC/IMG/logo.png");
-  min-height: 20px;
+  min-height: 22px;
   vertical-align: text-bottom !important;
 }
 @media (max-width: 750px) {
   nav .nav-items {
     display: none;
+  }
+  nav .logo img {
+    vertical-align: middle !important;
+    margin-left: 3em;
   }
 }
 

@@ -75,17 +75,20 @@ nav
 
     .logo
         margin-left: 3em
-        font-size: 25px
+        font-size: 22px
 
     .logo img 
         height: 2vw
         content: url("../SRC/IMG/logo.png")
-        min-height: 20px
+        min-height: 22px
         vertical-align: text-bottom !important
 
     @media (max-width: $small-screen)
         .nav-items
             display: none
+        .logo img 
+            vertical-align: middle !important
+            margin-left: 3em
 
 .blank
     height: $sm-page
