@@ -40,44 +40,46 @@ function isScrolledIntoViewVtl(elem) {
 }
 
 function isScrolledIntoViewHzl(elem) {
-    var position = $(elem).scrollLeft()/$(elem)[0].scrollWidth
-    console.log($(elem).scrollLeft() +"\\" + $(elem)[0].scrollWidth)
+    console.log($(window).width())
+    if($(window).width() < 750) {    
+        var position = $(elem).scrollLeft()/$(elem)[0].scrollWidth
+        console.log($(elem).scrollLeft() +"\\" + $(elem)[0].scrollWidth)
 
-    if(position < 0.17){
-        console.log("first")
+        if(position < 0.17){
+            console.log("first")
 
-         $("#Intro-texts h3:nth-child(1)").css('display', 'block')
-         $("#Intro-texts p:nth-child(2)").css('display', 'block')
+            $("#Intro-texts h3:nth-child(1)").css('display', 'block')
+            $("#Intro-texts p:nth-child(2)").css('display', 'block')
+
+            $("#Intro-texts h3:nth-child(3)").css('display', 'none')
+            $("#Intro-texts p:nth-child(4)").css('display', 'none')
+
+            $("#Intro-texts h3:nth-child(5)").css('display', 'none')
+            $("#Intro-texts p:nth-child(6)").css('display', 'none')
+        }
+        else if(position > 0.66){
+            console.log("last")
+            $("#Intro-texts h3:nth-child(1)").css('display', 'none')
+            $("#Intro-texts p:nth-child(2)").css('display', 'none')
 
         $("#Intro-texts h3:nth-child(3)").css('display', 'none')
         $("#Intro-texts p:nth-child(4)").css('display', 'none')
 
+        $("#Intro-texts h3:nth-child(5)").css('display', 'block')
+        $("#Intro-texts p:nth-child(6)").css('display', 'block')
+        }
+        else{
+            console.log("middle")
+
+            $("#Intro-texts h3:nth-child(1)").css('display', 'none')
+            $("#Intro-texts p:nth-child(2)").css('display', 'none')
+
+        $("#Intro-texts h3:nth-child(3)").css('display', 'block')
+        $("#Intro-texts p:nth-child(4)").css('display', 'block')
+
         $("#Intro-texts h3:nth-child(5)").css('display', 'none')
         $("#Intro-texts p:nth-child(6)").css('display', 'none')
-    }
-    else if(position > 0.66){
-        console.log("last")
-        $("#Intro-texts h3:nth-child(1)").css('display', 'none')
-        $("#Intro-texts p:nth-child(2)").css('display', 'none')
-
-       $("#Intro-texts h3:nth-child(3)").css('display', 'none')
-       $("#Intro-texts p:nth-child(4)").css('display', 'none')
-
-       $("#Intro-texts h3:nth-child(5)").css('display', 'block')
-       $("#Intro-texts p:nth-child(6)").css('display', 'block')
-    }
-    else{
-        console.log("middle")
-
-        $("#Intro-texts h3:nth-child(1)").css('display', 'none')
-        $("#Intro-texts p:nth-child(2)").css('display', 'none')
-
-       $("#Intro-texts h3:nth-child(3)").css('display', 'block')
-       $("#Intro-texts p:nth-child(4)").css('display', 'block')
-
-       $("#Intro-texts h3:nth-child(5)").css('display', 'none')
-       $("#Intro-texts p:nth-child(6)").css('display', 'none')
-    }
+        }}
 }
 
 

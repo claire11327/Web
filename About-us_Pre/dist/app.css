@@ -179,9 +179,7 @@ nav .logo img {
   }
   #Use .row .col-xl-2 {
     display: inline-block;
-  }
-  #Use .row .col-xl-2:nth-child(1) {
-    margin-left: 2.8em;
+    margin-right: 3em;
   }
   #Use .row .col-xl-2:nth-last-child(1) {
     margin-right: 2.8em;
@@ -201,6 +199,7 @@ nav .logo img {
   padding-bottom: 2em;
   position: relative;
   margin-bottom: 2em;
+  min-width: 120px;
 }
 #Use .Use-boxs .number {
   align-items: center;
@@ -224,6 +223,7 @@ nav .logo img {
   font-size: 5.2vw;
   margin: 0.3em auto;
   height: 0.8em;
+  min-height: 50px;
 }
 #Use .Use-boxs p {
   font-size: 1vw;
