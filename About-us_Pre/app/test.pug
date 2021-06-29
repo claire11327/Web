@@ -1,0 +1,58 @@
+doctype html
+html
+    head
+        meta(charset="utf-8" content="width=device-width, initial-scale=1" name="viewport")
+        link(href="app.css" rel="stylesheet" type="text/css")
+        link(rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous")
+        script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js")
+
+
+body
+
+    main
+        section#Home.pages
+            div
+                p#title.mb-5 乖孫美美<br>Linebot 
+                dd.
+                    親切的聊天機器人可以為您或家中長者<br>設定藥物提醒，讓這件事情不再成為負擔。
+                button.Home-button.btn.my-3(onClick="document.getElementById('About').scrollIntoView();") 更多資訊
+        
+        //- section#Intro.pages
+        //-     p.h2.mb-5 What can XXX do?
+        //-     p.text-center.mb-5.
+        //-         Note that we don’t provide utility classes for justified text. While,
+        //-         aesthetically, justified text might look more appealingbr
+        //-         , it does make word-spacing more random and therefore harder to read.
+        //-     .wrapper.mx-auto
+        //-         each area in ["Asia", "London", "Italy", "America", "France", "Others"]                    
+        //-             .Intro-grids
+        //-                 .overlay-Img
+        //-                 h2.overlay-detail= area
+        //-                 img
+
+        //- section#Use.pages
+        //-     p.h2.mb-5.text-center 使用流程
+        //-     .my-5.px-5
+        //-         .row.mx-auto   
+        //-             -var i = 0;
+        //-             -var usetext=["上傳<br>不同藥物至linebot", "新增<br>藥物提醒時間", "設定<br>監督人/被監督人", "收到<br>藥物提醒通知", "確認<br>是否服用藥物", "聯絡人收到<br>未服用藥物通知"]
+        //-             while i < 6
+        //-                 .col-6.col-md-4.col-xl-2
+        //-                     .Use-boxs.shadow
+        //-                         i.number= ++i
+        //-                         .icon(id="Use-icons-" + i)
+        //-                         p !{usetext[i-1]}
+        //-             button.btn.col-md-3.mx-auto
+        //-                 | 開始使用
+        section#About.pages
+            p.h2.mb-5 關於我們
+            p.text-center.mb-3.
+               我們是來自成功大學不同系所的學生，透過使用者介面開發設計及社群網站研究的課程跨領域合作，<br>
+                我們結合上課所學及使用者調研產生出藥物提醒聊天機器人。
+            .row
+                - var name = ["傅立威", "謝秉穎", "蘇柏銜", "李姿儀", "周郁婕", "黃盈慈", "田哲嘉"];
+                each dpt, index in ["Linebot工程師", "Linebot工程師", "Linebot工程師", "設計師", "後端工程師", "前端工程師", "前端工程師"]
+                    .col(id="About-grids-"+ (index+1))
+                        pre= dpt+ "\n "+ name[index]
+
+        script(src="../js/index.js" type="text/javascript")                     

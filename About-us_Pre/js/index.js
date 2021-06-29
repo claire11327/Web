@@ -36,9 +36,6 @@ function isScrolledIntoView(elem) {
 
 $("nav a[href='#Use']").on("click", function(e){
     var offset = $('#Home').outerHeight() + $('#Intro').outerHeight();
-    if($('#Use').height()*3 < $(window).height()*2){
-        offset -= $('#Use').outerHeight()/3;
-    }
-    $('html, body').animate({scrollTop:offset}, 700);
+    $('html, body').animate({scrollTop:offset}, 70);
     return false;
 } )
