@@ -27,20 +27,22 @@ body
     
 
     main
-        header#Home.pages
-            div
-                p#title.mb-5 乖孫美美<br>Linebot 
-                dd.
-                    親切的聊天機器人可以為您或家中長者設定藥物提醒，<br>讓這件事情不再成為負擔。
-                button.Home-button.btn.my-3(onClick="document.getElementById('About').scrollIntoView();") 更多資訊
+        header
+            #Home.pages
+                div
+                    p#title.mb-3 乖孫美美<br>Linebot 
+                    dd.
+                        親切的聊天機器人可以為您或家中長者設定藥物提醒，<br>讓這件事情不再成為負擔。
+                    button.Home-button.btn.my-3(onClick="document.getElementById('About').scrollIntoView();") 更多資訊
         
         section#Intro.pages
             .row 
-                .col-7.d-flex.justify-content-around
-                        div(id="Intro-1")
-                        div(id="Intro-2")
-                        div(id="Intro-3")
-                .col-5
+                .col-xs-7.d-flex.justify-content-around.col-sm-6
+                    .row 
+                        .col(id="Intro-1")
+                        .col(id="Intro-2")
+                        .col(id="Intro-3")
+                .col-xs-5.col-sm-6
                     h3 01. 簡易操做的使用流程
                     p.mb-5.
                         聊天機器人與Line結合，不必多下載一個APP就能夠使用，並且親切的美美將協助長者完成藥物提醒設定，讓長者再使用過程中：也能感到子女般的關心。
@@ -50,6 +52,7 @@ body
                     h3 03. 減緩家中子女的負擔
                     p.mb-5.
                         透過監督人與被監督人的機制，讓子女能夠遠端為家中長輩設定藥物提醒，並且會將服用藥物的狀況即時透過Line回傳給子女，減少子女的擔憂。
+                        
                 
 
         section#Use.pages
@@ -59,18 +62,19 @@ body
                     -var i = 0;
                     -var usetext=["上傳<br>不同藥物至linebot", "新增<br>藥物提醒時間", "設定<br>監督人/被監督人", "收到<br>藥物提醒通知", "確認<br>是否服用藥物", "聯絡人收到<br>未服用藥物通知"]
                     while i < 6
-                        .col-6.col-md-4.col-xl-2
+                        .col-8.col-md-4.col-xl-2
                             .Use-boxs.shadow
                                 i.number= ++i
                                 .icon(id="Use-icons-" + i)
                                 p !{usetext[i-1]}
+                .row
                     button.btn.col-md-3.mx-auto
                         | 開始使用
         
         section#About.pages
             p.h2.mb-5 關於我們
-            p.text-center.mb-3.
-               我們是來自成功大學不同系所的學生，透過使用者介面開發設計及社群網站研究的課程跨領域合作，<br>
+            p.mb-3.
+               我們是來自成功大學不同系所的學生，透過使用者介面開發設計及社群網站研究的課程跨領域合作，
                 我們結合上課所學及使用者調研產生出藥物提醒聊天機器人。
             .row
                 - var name = ["傅立威", "謝秉穎", "蘇柏銜", "李姿儀", "周郁婕", "黃盈慈", "田哲嘉"];

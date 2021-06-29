@@ -15,6 +15,10 @@ $md-fsize: 1.8vw
 $sm-fsize: 1.2vw
 $xs-fsize: 0.5vw
 
+$medium-screen: 1000px
+$small-screen:750px
+
+
 $bd-radius: 20px
 
 =bgImg($imgUrl)
@@ -51,6 +55,7 @@ nav
     height: $sm-page
     top: 0%
     font-weight: bold
+    width: 100vw
 
     ul 
         //margin-right: 2em
@@ -87,8 +92,22 @@ nav
     background-position: right
     background-repeat: no-repeat
     min-height: 60vh
-    background-size: 100vw, auto
+    background-size: 90vw, auto
     text-align: left
+
+    @media (max-width: $medium-screen)
+        #title
+            font-size: 9vw !important
+    @media (max-width: $small-screen)
+        background: url(../SRC/IMG/home-overlayed.png)
+        background-position: center
+        background-repeat: no-repeat
+        min-height: 60vh
+        background-size: 100vw, auto
+        
+        dd
+            color: #FFFFFF !important
+
 
 
 
@@ -127,16 +146,32 @@ nav
     p 
         color: #4D4F52
 
+    .row 
+        width: 100%
+        @media (max-width: $medium-screen)
+            .row 
+                width: 100%
+                display: block !important
+                overflow-x: scroll !important
+                white-space: nowrap !important
+                overflow-y: hidden
+        @media (max-width: $small-screen)
+            .col-xs-7 .row 
+                margin-bottom: 2em
+
+    #hidden-Intro
+        display: none
+
     $icons: 3
     @for $i from 0 to $icons 
-        .row .col-7  div:nth-child(#{$i+1})
-            display: inline-block
-            height: 100%
-            width: 33%
-            +bgImg('../SRC/IMG/intro/Intro#{$i+1}.jpg')
+        .row .col-xs-7 .row div:nth-child(#{$i+1})
+                display: inline-block
+                height: 100%
+                min-height: 60vh
+                width: 100%
+                +bgImg('../SRC/IMG/intro/Intro#{$i+1}.jpg')
     
     
-
 
 
 
@@ -145,6 +180,32 @@ nav
 
 /* Use */ 
 #Use 
+
+    @media (max-width: $small-screen)
+        .row 
+            width: 100%
+            display: block !important
+            overflow-x: scroll !important
+            white-space: nowrap !important
+            overflow-y: hidden
+        
+            .col-xl-2 
+                display: inline-block
+            
+            .col-xl-2:nth-child(1)
+                margin-left: 2.8em
+            .col-xl-2:nth-last-child(1)
+                margin-right: 2.8em
+
+            button
+                display: none
+
+
+
+            .Use-boxs 
+                margin-bottom: 0.3em
+                margin-top: 2em
+    
     .Use-boxs 
         background: #fff
         border-radius: 12px
@@ -152,7 +213,6 @@ nav
         padding-bottom: $md-padding
         position: relative
         margin-bottom: 2em
-        width: 100%   
 
   
         .number 

@@ -25,6 +25,7 @@ nav {
   height: calc((12.5vh+12.5vw)/2);
   top: 0%;
   font-weight: bold;
+  width: 100vw;
 }
 nav ul {
   text-align: center;
@@ -61,8 +62,25 @@ nav .logo img {
   background-position: right;
   background-repeat: no-repeat;
   min-height: 60vh;
-  background-size: 100vw, auto;
+  background-size: 90vw, auto;
   text-align: left;
+}
+@media (max-width: 1000px) {
+  #Home #title {
+    font-size: 9vw !important;
+  }
+}
+@media (max-width: 750px) {
+  #Home {
+    background: url(../SRC/IMG/home-overlayed.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 60vh;
+    background-size: 100vw, auto;
+  }
+  #Home dd {
+    color: #FFFFFF !important;
+  }
 }
 #Home div {
   color: #27AE60;
@@ -99,28 +117,51 @@ nav .logo img {
 #Intro p {
   color: #4D4F52;
 }
-#Intro .row .col-7 div:nth-child(1) {
+#Intro .row {
+  width: 100%;
+}
+@media (max-width: 1000px) {
+  #Intro .row .row {
+    width: 100%;
+    display: block !important;
+    overflow-x: scroll !important;
+    white-space: nowrap !important;
+    overflow-y: hidden;
+  }
+}
+@media (max-width: 750px) {
+  #Intro .row .col-xs-7 .row {
+    margin-bottom: 2em;
+  }
+}
+#Intro #hidden-Intro {
+  display: none;
+}
+#Intro .row .col-xs-7 .row div:nth-child(1) {
   display: inline-block;
   height: 100%;
-  width: 33%;
+  min-height: 60vh;
+  width: 100%;
   background: url("../SRC/IMG/intro/Intro1.jpg");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
 }
-#Intro .row .col-7 div:nth-child(2) {
+#Intro .row .col-xs-7 .row div:nth-child(2) {
   display: inline-block;
   height: 100%;
-  width: 33%;
+  min-height: 60vh;
+  width: 100%;
   background: url("../SRC/IMG/intro/Intro2.jpg");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
 }
-#Intro .row .col-7 div:nth-child(3) {
+#Intro .row .col-xs-7 .row div:nth-child(3) {
   display: inline-block;
   height: 100%;
-  width: 33%;
+  min-height: 60vh;
+  width: 100%;
   background: url("../SRC/IMG/intro/Intro3.jpg");
   background-size: contain;
   background-repeat: no-repeat;
@@ -128,6 +169,31 @@ nav .logo img {
 }
 
 /* Use */ 
+@media (max-width: 750px) {
+  #Use .row {
+    width: 100%;
+    display: block !important;
+    overflow-x: scroll !important;
+    white-space: nowrap !important;
+    overflow-y: hidden;
+  }
+  #Use .row .col-xl-2 {
+    display: inline-block;
+  }
+  #Use .row .col-xl-2:nth-child(1) {
+    margin-left: 2.8em;
+  }
+  #Use .row .col-xl-2:nth-last-child(1) {
+    margin-right: 2.8em;
+  }
+  #Use .row button {
+    display: none;
+  }
+  #Use .row .Use-boxs {
+    margin-bottom: 0.3em;
+    margin-top: 2em;
+  }
+}
 #Use .Use-boxs {
   background: #fff;
   border-radius: 12px;
@@ -135,7 +201,6 @@ nav .logo img {
   padding-bottom: 2em;
   position: relative;
   margin-bottom: 2em;
-  width: 100%;
 }
 #Use .Use-boxs .number {
   align-items: center;
