@@ -81,6 +81,7 @@ nav .logo img {
   }
   #Home dd {
     color: #FFFFFF !important;
+    font-size: 15px;
   }
 }
 #Home div {
@@ -88,6 +89,7 @@ nav .logo img {
 }
 #Home div dd {
   color: #4D4F52;
+  font-size: 17px;
 }
 #Home .Home-button {
   border-color: #FDCD0D;
@@ -227,9 +229,14 @@ nav .logo img {
   min-height: 50px;
 }
 #Use .Use-boxs p {
-  font-size: 1vw;
+  font-size: 15px;
   margin: 0 !important;
   color: #4D4F52;
+}
+@media (max-width: 750px) {
+  #Use .Use-boxs p {
+    font-size: 10px;
+  }
 }
 #Use button {
   background-color: #27AE60;
