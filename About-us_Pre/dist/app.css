@@ -52,6 +52,11 @@ nav .logo img {
   min-height: 20px;
   vertical-align: text-bottom !important;
 }
+@media (max-width: 750px) {
+  nav .nav-items {
+    display: none;
+  }
+}
 
 .blank {
   height: calc((12.5vh+12.5vw)/2);
@@ -211,7 +216,7 @@ nav .logo img {
   box-shadow: 0px 5px 10px 0 rgba(107, 103, 103, 0.52);
   color: #fff;
   display: inline-flex;
-  font-size: 13px;
+  font-size: 15px;
   font-style: normal !important;
   height: 40px;
   justify-content: center;
