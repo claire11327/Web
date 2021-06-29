@@ -25,13 +25,10 @@ $(window).on('scroll', function() {
         $('.nav-items a[href="#About"]').removeClass('scrolling');
     }
 
-    if(isScrolledIntoViewHzl($('#About'))){
-        $('.nav-items a[href="#About"]').addClass('scrolling');
-    }else{
-        $('.nav-items a[href="#About"]').removeClass('scrolling');
-    }
-
 })
+
+
+$('#Intro-imgs').on('scroll', isScrolledIntoViewHzl($('#Intro-imgs')))
 
 function isScrolledIntoViewVtl(elem) {
     var docViewTop = $(window).scrollTop()-$('nav').height();
@@ -43,28 +40,56 @@ function isScrolledIntoViewVtl(elem) {
 }
 
 function isScrolledIntoViewHzl(elem) {
-    var docViewTop = $(window).scrollTop()-$('nav').height();
-    var docViewBottom = docViewTop + $(window).height();
-  
-    var elemTop = $(elem).offset().top;
-    var elemBottom = elemTop + ($(elem).height()*2/3);
-    return ((elemBottom <= docViewBottom) && (elemTop >= docViewTop));
+    var position = $(elem).scrollLeft()/$(elem)[0].scrollWidth
+    console.log($(elem).scrollLeft() +"\\" + $(elem)[0].scrollWidth)
+
+    if(position < 0.17){
+        console.log("first")
+
+         $("#Intro-texts h3:nth-child(1)").css('display', 'block')
+         $("#Intro-texts p:nth-child(2)").css('display', 'block')
+
+        $("#Intro-texts h3:nth-child(3)").css('display', 'none')
+        $("#Intro-texts p:nth-child(4)").css('display', 'none')
+
+        $("#Intro-texts h3:nth-child(5)").css('display', 'none')
+        $("#Intro-texts p:nth-child(6)").css('display', 'none')
+    }
+    else if(position > 0.66){
+        console.log("last")
+        $("#Intro-texts h3:nth-child(1)").css('display', 'none')
+        $("#Intro-texts p:nth-child(2)").css('display', 'none')
+
+       $("#Intro-texts h3:nth-child(3)").css('display', 'none')
+       $("#Intro-texts p:nth-child(4)").css('display', 'none')
+
+       $("#Intro-texts h3:nth-child(5)").css('display', 'block')
+       $("#Intro-texts p:nth-child(6)").css('display', 'block')
+    }
+    else{
+        console.log("middle")
+
+        $("#Intro-texts h3:nth-child(1)").css('display', 'none')
+        $("#Intro-texts p:nth-child(2)").css('display', 'none')
+
+       $("#Intro-texts h3:nth-child(3)").css('display', 'block')
+       $("#Intro-texts p:nth-child(4)").css('display', 'block')
+
+       $("#Intro-texts h3:nth-child(5)").css('display', 'none')
+       $("#Intro-texts p:nth-child(6)").css('display', 'none')
+    }
 }
 
 
 
-function isScrolledIntoViewVtl(elem) {
-    var docViewTop = $(window).scrollTop()-$('nav').height();
-    var docViewBottom = docViewTop + $(window).height();
-  
-    var elemTop = $(elem).offset().top;
-    var elemBottom = elemTop + ($(elem).height()*2/3);
-    return ((elemBottom <= docViewBottom) && (elemTop >= docViewTop));
+
+function IntroRWD() {
+    console.log($(window).width())
+    if($(window).width() <= 750){
+        $('#Intro .col-xs-5').addClass("order-1")
+        $('#Intro .col-xs-7').addClass("order-2")
+    }
 }
-
-
-
-
 
 
 

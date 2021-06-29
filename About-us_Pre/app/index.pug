@@ -38,11 +38,11 @@ body
         section#Intro.pages
             .row.mx-auto
                 .col-xs-7.d-flex.justify-content-around.col-sm-6
-                    .row 
+                    .row#Intro-imgs(onscroll="isScrolledIntoViewHzl(this)")
                         .col(id="Intro-1")
                         .col(id="Intro-2")
                         .col(id="Intro-3")
-                .col-xs-5.col-sm-6
+                .col-xs-5.col-sm-6(id="Intro-texts")
                     h3 01. 簡易操做的使用流程
                     p.mb-5.
                         聊天機器人與Line結合，不必多下載一個APP就能夠使用，並且親切的美美將協助長者完成藥物提醒設定，讓長者再使用過程中：也能感到子女般的關心。
