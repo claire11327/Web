@@ -56,9 +56,11 @@ nav .logo img {
   nav .nav-items {
     display: none;
   }
+  nav .logo {
+    margin-left: 0.2em;
+  }
   nav .logo img {
     vertical-align: middle !important;
-    margin-left: 0.2em;
   }
 }
 
